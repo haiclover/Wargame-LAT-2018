@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="refresh" content="4;url=http://207.148.71.112/Wargame/Main">
+	<title></title>
+	<style>
+	html,
+body,
+.eye {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ margin: auto;
+}
+body {
+  background: -webkit-linear-gradient(115deg, #e8dcc6 , #dfd0b6 ) no-repeat fixed;;
+  background: linear-gradient(115deg, #e8dcc6 , #dfd0b6 ) no-repeat fixed;
+}
+.eye {
+  z-index: 800;
+}
+.eye polygon {
+  stroke: #e1afff;
+  stroke-width: 0.15;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: all 6s ease;
+          transition: all 6s ease;
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
+}
+.eye polygon:nth-of-type(4n+1) {
+  -webkit-animation: p1 3s ease 1;
+          animation: p1 3s ease 1;
+}
+.eye polygon:nth-of-type(4n+2) {
+  -webkit-animation: p2 3s ease 1;
+          animation: p2 3s ease 1;
+}
+.eye polygon:nth-of-type(4n+3) {
+  -webkit-animation: p3 3s ease 1;
+          animation: p3 3s ease 1;
+}
+.eye polygon:nth-of-type(4n+4) {
+  -webkit-animation: p4 3s ease 1;
+          animation: p4 3s ease 1;
+}
+.hover {
+  position: absolute;
+  width: 40%;
+  height: 40vw;
+  top: 50%;
+  left: 30%;
+  margin-top: -20vw;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  background: rgba(0,0,0,0);
+  -webkit-animation: waitforit 0 ease-in 3s 1 forwards;
+          animation: waitforit 0 ease-in 3s 1 forwards;
+}
+.hover:hover + .eye polygon:nth-of-type(4n+1) {
+  -webkit-transform: translate(800%, 400%) rotate(-690deg) translateZ(0);
+          transform: translate(800%, 400%) rotate(-690deg) translateZ(0);
+}
+.hover:hover + .eye polygon:nth-of-type(4n+2) {
+  -webkit-transform: translate(-700%, 600%) rotate(-720deg) translateZ(0);
+          transform: translate(-700%, 600%) rotate(-720deg) translateZ(0);
+}
+.hover:hover + .eye polygon:nth-of-type(4n+3) {
+  -webkit-transform: translate(-900%, -500%) rotate(-820deg) translateZ(0);
+          transform: translate(-900%, -500%) rotate(-820deg) translateZ(0);
+}
+.hover:hover + .eye polygon:nth-of-type(4n+4) {
+  -webkit-transform: translate(700%, -800%) rotate(-950deg) translateZ(0);
+          transform: translate(700%, -800%) rotate(-950deg) translateZ(0);
+}
+@-webkit-keyframes p1 {
+  0% {
+    -webkit-transform: translate(-300%, -700%) rotate(520deg) translateZ(0);
+            transform: translate(-300%, -700%) rotate(520deg) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes p1 {
+  0% {
+    -webkit-transform: translate(-300%, -700%) rotate(520deg) translateZ(0);
+            transform: translate(-300%, -700%) rotate(520deg) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@-webkit-keyframes p2 {
+  0% {
+    -webkit-transform: translate(400%, -900%) rotate(850deg) translateZ(0);
+            transform: translate(400%, -900%) rotate(850deg) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes p2 {
+  0% {
+    -webkit-transform: translate(400%, -900%) rotate(850deg) translateZ(0);
+            transform: translate(400%, -900%) rotate(850deg) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@-webkit-keyframes p3 {
+  0% {
+    -webkit-transform: translate(500%, 900%) rotate(325deg) translateZ(0);
+            transform: translate(500%, 900%) rotate(325deg) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes p3 {
+  0% {
+    -webkit-transform: translate(500%, 900%) rotate(325deg) translateZ(0);
+            transform: translate(500%, 900%) rotate(325deg) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@-webkit-keyframes p4 {
+  0% {
+    -webkit-transform: translate(-500%, 900%) rotate(748deg) translateZ(0);
+            transform: translate(-500%, 900%) rotate(748deg) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes p4 {
+  0% {
+    -webkit-transform: translate(-500%, 900%) rotate(748deg) translateZ(0);
+            transform: translate(-500%, 900%) rotate(748deg) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@-webkit-keyframes waitforit {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+@keyframes waitforit {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+	
+<div class="hover"></div>
+<svg class="eye" xmlns="http://www.w3.org/2000/svg"   width="px"
+     viewBox="0 0 1562 1104" enable-background="new 0 0 1562 1104">
+
+   
+<g id="Layer_10">
+	<polygon fill="#1D7FEC" points="686.6,502.5 655.3,280.5 778.8,453.9 	"/>
+	<polygon fill="#4498D4" points="655.3,280.5 778.8,453.9 847,430.3 	"/>
+	<polygon fill="#B1FF55" points="724,430.3 898.3,261.3 877.1,472 	"/>
+	<polygon fill="#FE8022" points="796,439 928.5,296 874.3,495.1 	"/>
+	<polygon fill="#46D4C8" points="862.3,441 1048,395.3 886.9,532 	"/>
+	<polygon fill="#1B7573" points="1048,395.3 904.8,543.7 886.9,532 	"/>
+	<polygon fill="#E58F46" points="890.2,475.3 1048,469.5 904,560.5 	"/>
+	<polygon fill="#FF5D58" points="950.9,544.5 1003,706.7 863.1,585.1 	"/>
+	<polygon fill="#D33A46" points="863.1,585.1 833.6,606 1003,706.7 	"/>
+	<polygon fill="#1970E3" points="802.8,665.5 950.7,791 926,580.2 	"/>
+	<polygon fill="#194077" points="942.5,573.5 926,580.2 950.7,791 	"/>
+	<polygon fill="#C6FE51" points="717,641.7 783,849 882.4,642.2 	"/>
+	<polygon fill="#1978EC" points="552.9,758.7 803.1,708.1 733.9,648 	"/>
+	<polygon fill="#193867" points="699.5,612.9 552.9,758.7 733.9,648 	"/>
+	<polygon fill="#FF5953" points="740.3,653.8 511.5,645 719.2,525 	"/>
+	<polygon fill="#D03B46" points="717,495.2 719.2,525 511.5,645 	"/>
+	<polygon fill="#B295E7" points="710.2,592.3 478.8,515 713.5,412.8 	"/>
+	<polygon fill="#E8D83A" points="713.8,564.9 498,424.2 765,439 	"/>
+	<polygon fill="#F3BA23" points="765,439 775,397.8 498,424.2 	"/>
+	<polygon fill="#8B5AB8" points="724,523.2 563,376.3 828.9,443.5 	"/>
+	<polygon fill="#D451A1" points="870.8,465.1 1072.7,544.3 865.4,606 	"/>
+	<polygon fill="#B8285D" points="1072.7,544.3 883.3,629.2 865.4,606 	"/>
+</g>
+<g id="Layer_8">
+	<g id="Layer_9">
+	</g>
+	<polygon fill="#42C160" points="674.4,544.5 595.3,304 748.4,472 	"/>
+	<polygon fill="#AFD750" points="595.3,304 748.4,472 804.2,448 	"/>
+	<polygon fill="#CF3F4E" points="682,491.3 775,261.3 834,460.8 	"/>
+	<polygon fill="#522832" points="775,261.3 834,460.8 862.3,475.3 	"/>
+	<polygon fill="#2A5790" points="770.9,447 1019.7,344.3 838.6,489.8 	"/>
+	<polygon fill="#106A68" points="865.3,491.3 1096.7,612 863.1,535.8 	"/>
+	<polygon fill="#089771" points="824,641.7 1096.7,612 863.1,535.8 	"/>
+	<polygon fill="#8458B9" points="871.2,605.6 895.3,834.5 731.5,628.1 	"/>
+	<polygon fill="#B8285D" points="694.7,630.7 704.2,838.5 801,650.8 	"/>
+	<polygon fill="#D451A1" points="801,650.8 704.2,838.5 827.6,637 	"/>
+	<polygon fill="#126867" points="665.8,529 518,714.5 682.9,568.9 	"/>
+	<polygon fill="#159C79" points="682.9,568.9 749.8,624.8 518,714.5 	"/>
+	<polygon fill="#CB519E" points="697.1,471 718.2,593 483.5,578.6 	"/>
+	<polygon fill="#2784F3" points="828.9,494.6 1019.7,344.3 876.7,547.2 	"/>
+</g>
+<g id="Layer_7">
+	<polygon fill="#44D6C7" points="720.7,510.3 692.5,290.5 760.8,488.3 	"/>
+	<polygon fill="#1B7573" points="760.8,489.9 796.7,481 692.5,290.5 	"/>
+	<polygon fill="#855AB6" points="757.5,476 847.3,298 815.1,493.7 	"/>
+	<polygon fill="#B599E6" points="847.3,298 815.1,493.7 842.3,503.9 	"/>
+	<polygon fill="#B398E5" points="835.6,487.9 1059.8,524.2 852.8,551.5 	"/>
+	<polygon fill="#8859B9" points="850.3,592.1 1059.8,524.2 853,550.7 	"/>
+	<polygon fill="#ECB826" points="865.3,529 956.7,755 816.2,612.5 	"/>
+	<polygon fill="#E6D93D" points="789.5,627.6 956.7,755 816.2,612.5 	"/>
+	<polygon fill="#F2BB23" points="705.5,559.4 643.3,771 753,615 	"/>
+	<polygon fill="#E7D93A" points="753,615 785.8,622.8 643.3,771 	"/>
+	<polygon fill="#44D6C7" points="698.6,550.4 577,432.1 745.3,485 	"/>
+	<polygon fill="#B398E5" points="690.8,511.8 560.6,641 701.5,577.8 	"/>
+	<polygon fill="#8654B5" points="704.3,576.2 560.6,641 736.6,615.8 	"/>
+</g>
+<g id="Layer_6">
+	<polygon fill="#E4D53A" points="763.5,497 669.9,404.7 711.1,520.7 	"/>
+	<polygon fill="#E28842" points="747.4,489.9 777.1,324 807.6,492.1 	"/>
+	<polygon fill="#E0D23C" points="777.1,324 831.6,496.5 807.6,492.1 	"/>
+	<polygon fill="#BC3064" points="791,481.5 940.2,366.6 807.3,497.6 	"/>
+	<polygon fill="#D057A6" points="940.2,366.6 850.6,547.2 807.3,497.6 	"/>
+	<polygon fill="#38B9FD" points="857.6,506.9 995,568.8 856.2,521.2 	"/>
+	<polygon fill="#1F81EE" points="849.5,593.9 995,568.8 856.2,521.2 	"/>
+	<polygon fill="#1556A6" points="847.1,612.1 849.5,593.9 995,568.8 	"/>
+	<polygon fill="#3FD5C4" points="856.4,567.2 883.5,728.4 822.5,601.1 	"/>
+	<polygon fill="#136561" points="791.7,617.2 822.5,601.1 883.5,728.4 	"/>
+	<polygon fill="#D33A46" points="715,572.4 715.1,734.7 752.5,606.2 	"/>
+	<polygon fill="#FF5D58" points="752.5,605.7 715.1,734.7 813.2,618 	"/>
+	<polygon fill="#3BC55E" points="722,505.9 530.4,560.3 724.2,550.5 	"/>
+	<polygon fill="#AED449" points="530.4,560.3 745.3,627.6 724.2,550.5 	"/>
+</g>
+<g id="Layer_5">
+	<polygon fill="#AE1F4F" points="724.2,557.9 608.1,684.8 736,586.2 	"/>
+	<polygon fill="#DD7C2D" points="736,586.2 747.8,602.1 608.1,684.8 	"/>
+	<polygon fill="#E59DC3" points="747.8,602.1 768.9,618 608.1,684.8 	"/>
+	<polygon fill="#DF8237" points="740.4,604.7 809.2,799.1 801.6,608.4 	"/>
+	<polygon fill="#D64623" points="801.6,608.4 833.5,608.9 809.2,799.1 	"/>
+	<polygon fill="#AED44B" points="863.1,552.1 922.4,637.2 850,568.7 	"/>
+	<polygon fill="#39C562" points="850,568.7 834.6,585.8 922.4,637.2 	"/>
+	<polygon fill="#48D8C7" points="835.5,507.6 956.9,498.1 844.5,539.8 	"/>
+	<path opacity="0.5" fill="none" stroke="#4AFF8B" stroke-miterlimit="10" d="M838.5,539.8"/>
+	<polygon fill="#1D7274" points="844.5,539.8 956.9,498.1 847.2,575.1 	"/>
+	<polygon fill="#1E79E4" points="777.5,491.7 865.4,368 809.2,498.1 	"/>
+	<polygon fill="#38B0F6" points="865.4,368 841.6,518.9 809.2,498.1 	"/>
+	<polygon fill="#488E4F" points="834.6,585.8 820.7,602.1 922.4,637.2 	"/>
+	<polygon fill="#224D81" points="756.3,485 505.3,485 729,520.8 	"/>
+	<polygon fill="#1C7AE6" points="729,519.5 729,583.7 505.3,485 	"/>
+</g>
+<g id="Layer_4">
+	<polygon fill="#CE3944" points="620.2,576.8 710.3,550.1 711.8,564.9 	"/>
+	<polygon fill="#FF6644" points="620.2,576.8 717.2,588.8 711.5,564.9 	"/>
+	<polygon fill="#E2813C" points="663.8,527 710,553 716.2,538.4 	"/>
+	<polygon fill="#EBB225" points="663.8,527 717.2,519.5 716.2,538.4 	"/>
+	<path opacity="0.5" fill="none" stroke="#067DFF" stroke-miterlimit="10" d="M729,506.2"/>
+	<polygon fill="#E24DAD" points="730,507 730,418 758.9,491.7 	"/>
+	<polygon fill="#B62E5E" points="730,418 758.4,491.7 781,486.2 	"/>
+	<polygon fill="#FE4871" points="762.5,487 789.5,427.8 791,487 	"/>
+	<polygon fill="#BC2A61" points="789.5,427.8 808.5,488.3 791,486.7 	"/>
+	<polygon fill="#CD424B" points="819.6,500.7 895.3,467.3 835.3,525.2 	"/>
+	<polygon fill="#FF723A" points="895.3,467.3 851,545.9 835.3,525.2 	"/>
+	<polygon fill="#E3D743" points="853.9,537 899.3,564.9 845.5,563 	"/>
+	<polygon fill="#E28A42" points="899.3,564.9 846,563 846,576.8 	"/>
+	<polygon fill="#2FA1E9" points="843.4,586.8 885.5,637.8 819.9,606.2 	"/>
+	<polygon fill="#153765" points="885.5,637.8 811.9,616.5 819.9,606.2 	"/>
+	<polygon fill="#0F9471" points="791,621 748.8,688.3 767.5,618 	"/>
+	<polygon fill="#11716D" points="740.3,608 748.8,688.3 767.5,618 	"/>
+</g>
+<g id="circle">
+	<circle fill="#EDEBED" cx="781.3" cy="555.3" r="76.3"/>
+	<circle opacity="0.3" fill="#FFFFFF" cx="781.1" cy="554.8" r="58.9"/>
+	<circle cx="781.3" cy="555.3" r="44.3"/>
+	<circle fill="#FFFFFF" cx="796.5" cy="542.9" r="7.5"/>
+</g>
+</svg>
+</body>
+</html>

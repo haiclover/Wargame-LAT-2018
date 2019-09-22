@@ -1,0 +1,1 @@
+<?php require('../term.php'); ?>

@@ -1,0 +1,2 @@
+jQuery(document).ready(function($){function getToken(){let ck=document.cookie.match(/csrf_cookie_name=([a-z0-9]+)/);if(ck.length===2)return ck[1];return null;}
+let name=$('meta[name="csrf_name"]').attr('content');$.ajaxSetup({beforeSend:function(xhr,settings){if(settings.data.indexOf(name)===-1){settings.data+='&'+ name+'='+ encodeURIComponent(getToken());}}});});
